@@ -18,13 +18,16 @@
     "@tanstack/react-router": "^1.122.0",
     "@tanstack/react-router-devtools": "^1.122.0",
     "aws-amplify": "^6.6.6",
+    "papaparse": "^5.5.3",
     "react": "^18.2.0",
+    "react-audio-voice-recorder": "^2.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@aws-amplify/backend": "^1.5.0",
     "@aws-amplify/backend-cli": "^1.2.9",
     "@tanstack/router-plugin": "^1.122.1",
+    "@types/papaparse": "^5.3.16",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",

@@ -17,12 +17,24 @@ const schema = a.schema({
       createdDate: a.integer(),
       author: a.string().required()
     })
-    .authorization((allow) => [allow.owner()]),
+    .authorization((allow) => [allow.publicApiKey()]),
     Phrase: a.customType({
       sourcePhrase: a.string().required(),
       targetPhrase: a.string().required(),
       sourceId: a.string(),
       targetId: a.string()
+    }),
+  UserVocabList: a
+    .model({
+      vocabListId: a.string().required(),
+      id: a.id().required(),
+      userPhrases: a.ref("UserPhrase").array(),
+      learningSpeed: a.integer()
+    })
+    .authorization((allow) => [allow.owner()]),
+    UserPhrase: a.customType({
+      speakingLevel: a.integer(),
+      lastTimeSpeaking: a.integer()
     })
 });
 
